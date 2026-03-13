@@ -7,85 +7,78 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* Matching the background to the off-white in your logo */
-        body { background-color: #fdfdfc; color: #1a1a1a; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        /* Deep Charcoal/Black background */
+        body { background-color: #0a0a0a; color: #ffffff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         
         .glass-nav {
-            background-color: rgba(253, 253, 252, 0.9);
+            background-color: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        /* Subtle gradient to add depth without looking "cheap" */
-        .hero-gradient { background: linear-gradient(to bottom, #fdfdfc 0%, #f5f5f3 100%); }
+
+        /* Subtle dark radial gradient for depth */
+        .hero-gradient { 
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%); 
+        }
+
+        /* Input styling for dark mode */
+        input, textarea {
+            background-color: #121212 !important;
+            border: 1px solid #222 !important;
+            color: white !important;
+        }
+        input:focus, textarea:focus {
+            border-color: #444 !important;
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="glass-nav sticky top-0 z-50 py-6">
+    <nav class="glass-nav sticky top-0 z-50 py-4">
         <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="logo.jpg" alt="AI Sovereign Logo" class="h-16 md:h-20 w-auto object-contain">
+                <img src="logo.jpg" alt="AI Sovereign Logo" class="h-16 md:h-20 w-auto object-contain brightness-110">
             </div>
-            <a href="#contact" class="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-black transition border border-gray-200 px-6 py-2 rounded-full hover:bg-white">
+            <a href="#contact" class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white transition border border-gray-800 px-6 py-2 rounded-full hover:bg-white/5">
                 Inquire
             </a>
         </div>
     </nav>
 
     <main class="hero-gradient pt-24 pb-32 flex flex-col items-center justify-center text-center px-6">
-        <img src="logo.jpg" alt="AI Sovereign Logo" class="h-64 md:h-80 w-auto object-contain mb-12 drop-shadow-sm">
+        <img src="logo.jpg" alt="AI Sovereign Logo" class="h-64 md:h-80 w-auto object-contain mb-12 brightness-110">
         
-        <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-8 text-black">
-            The Future of <br><span class="text-gray-400 font-light text-4xl md:text-7xl">Digital Sovereignty</span>
+        <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-8 text-white">
+            The Future of <br><span class="text-gray-500 font-light text-4xl md:text-7xl">Digital Sovereignty</span>
         </h1>
         
-        <p class="max-w-2xl text-lg md:text-2xl text-gray-600 leading-relaxed mb-12 font-light">
+        <p class="max-w-2xl text-lg md:text-2xl text-gray-400 leading-relaxed mb-12 font-light">
             Architecting secure, autonomous, and intelligent systems.
         </p>
 
-        <div class="h-px w-32 bg-black/20 mb-12"></div>
+        <div class="h-px w-32 bg-white/10 mb-12"></div>
         
-        <a href="mailto:john.kelly@aisovereign.ai" class="text-2xl font-light text-black hover:text-gray-400 transition-all duration-300">
+        <a href="mailto:john.kelly@aisovereign.ai" class="text-2xl font-light text-white hover:text-gray-400 transition-all duration-300">
             john.kelly@aisovereign.ai
         </a>
     </main>
 
-    <section id="contact" class="py-24 bg-[#fdfdfc]">
+    <section id="contact" class="py-24 bg-[#0a0a0a]">
         <div class="max-w-xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-black tracking-tight mb-4">Initialize Contact</h2>
-                <p class="text-gray-400 font-light italic">Secure transmission for sovereign inquiries.</p>
+                <h2 class="text-4xl font-bold text-white tracking-tight mb-4">Initialize Contact</h2>
+                <p class="text-gray-500 font-light italic text-sm">Secure transmission for sovereign inquiries.</p>
             </div>
 
             <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-400 font-bold mb-2">Name</label>
-                        <input type="text" name="name" required class="w-full px-4 py-4 bg-white border border-gray-100 rounded-xl focus:border-black outline-none transition shadow-sm">
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Name</label>
+                        <input type="text" name="name" required class="w-full px-4 py-4 rounded-xl outline-none transition shadow-inner">
                     </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-400 font-bold mb-2">Email</label>
-                        <input type="email" name="email" required class="w-full px-4 py-4 bg-white border border-gray-100 rounded-xl focus:border-black outline-none transition shadow-sm">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs uppercase tracking-widest text-gray-400 font-bold mb-2">Inquiry Details</label>
-                    <textarea name="message" rows="5" required class="w-full px-4 py-4 bg-white border border-gray-100 rounded-xl focus:border-black outline-none transition shadow-sm"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-black text-white font-bold py-5 rounded-xl hover:bg-gray-800 transition shadow-2xl shadow-black/20 text-lg">
-                    Send Message
-                </button>
-            </form>
-        </div>
-    </section>
+        
+    
+            
 
-    <footer class="py-16 text-center bg-[#fdfdfc] border-t border-gray-100">
-        <p class="text-[10px] text-gray-400 tracking-[0.4em] uppercase font-bold">
-            &copy; 2026 AI SOVEREIGN | JOHN KELLY
-        </p>
-    </footer>
-
-</body>
-</html>
   
